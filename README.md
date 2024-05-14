@@ -16,3 +16,5 @@ from myapp import mymodel
 - Дальше вводим: ```alembic revision --autogenerate -m "comment"```
 - Будет создана миграция
 - Дальше вводим: ```alembic upgrade heads```
+
+Видео https://www.youtube.com/watch?v=FYsOenDefkk&list=PLlKID9PnOE5jiWTTsshCXdz5qvg8JWezX&index=2
