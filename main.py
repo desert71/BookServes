@@ -1,4 +1,5 @@
-from fastapi import FastAPI, HTTPException, APIRouter
+from fastapi import FastAPI, HTTPException
+from fastapi.routing import APIRouter
 import uvicorn
 from sqlalchemy import Column, Boolean, String
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
@@ -8,6 +9,10 @@ import settings
 import uuid
 import re
 from pydantic import BaseModel, EmailStr, validator
+
+# create instance of the app
+app = FastAPI(title="BookServes")
+
 
 ##############################################
 # BLOCK FOR COMMON INTERACTION WITH DATABASE #
@@ -107,8 +112,6 @@ class UserCreate(BaseModel):
 # BLOCK WITH API ROUTES #
 #########################
 
-# create instance of the app
-app = FastAPI(title="BookServes")
 
 user_router = APIRouter()
 
